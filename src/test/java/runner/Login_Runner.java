@@ -11,7 +11,9 @@ import io.cucumber.testng.CucumberOptions;
 	@CucumberOptions(
 			features= {"D:\\Eclipse\\com.SwagLab_Cucumber\\src\\test\\resources\\Feature\\swaglabs.feature"},
 			glue="stepDef",
-			plugin= {"pretty", "html:target/cucumber-reports/swalabs.html", "json:target/cucumber-reports/swaglabs.json"},
+			plugin= {"pretty", "html:target/cucumber-reports/swalabs.html", 
+					"json:target/cucumber-reports/swaglabs.json",
+					"rerun:target/rerun_test_cases.txt"},
 			monochrome=true,
 			dryRun=false
 			)

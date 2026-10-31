@@ -22,7 +22,7 @@ public class Login_Swaglab  {
 	@FindBy(xpath = "//input[@type='password']")
 	WebElement password;
 	
-	@FindBy(xpath = "//input[@type='submit']" )
+	@FindBy(xpath = "//input[@type='submit1']" )
 	WebElement submit;
 	
 	public void enter_username(String uname) {
