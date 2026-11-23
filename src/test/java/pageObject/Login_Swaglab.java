@@ -5,14 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login_Swaglab  {
+import utilities.Base_Class;
 
-	WebDriver ldriver;
-	
-	public Login_Swaglab(WebDriver rdriver)
+public class Login_Swaglab extends Base_Class{
+	public WebDriver driver;
+	public Login_Swaglab(WebDriver driver)
 	{
-		ldriver=rdriver;
-		PageFactory.initElements(rdriver, this);
+		super(driver);
+		PageFactory.initElements(driver, this);
 	}
 	
 	
@@ -22,15 +22,16 @@ public class Login_Swaglab  {
 	@FindBy(xpath = "//input[@type='password']")
 	WebElement password;
 	
-	@FindBy(xpath = "//input[@type='submit1']" )
+	@FindBy(xpath = "//input[@type='submit']" )
 	WebElement submit;
 	
 	public void enter_username(String uname) {
-		username.click();
+		username.sendKeys(uname);
 	}
 	
 	public void enter_password(String pass) {
-		password.click();
+		password.sendKeys(pass);
+		
 	}
 	
 	public void click_on_login()

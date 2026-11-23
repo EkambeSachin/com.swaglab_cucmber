@@ -6,10 +6,9 @@ package runner;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-
 	//@RunWith(Cucumber.class)
 	@CucumberOptions(
-			features= {"src/test/resources/Feature/swaglabs.feature"},
+			features= {"src/test/resources/Feature"},
 			glue="stepDef",
 			plugin= {"pretty", "html:target/cucumber-reports/swalabs.html", 
 					"json:target/cucumber-reports/swaglabs.json",
